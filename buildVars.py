@@ -30,9 +30,9 @@ addon_info = AddonInfo(
 	# Author(s)
 	addon_author = "Rui Fontes <rui.fontes@tiflotecnia.com>, Rui Batista <ruiandrebatista@gmail.com> and NVDA Addon Team",
 	# URL for the add-on documentation support
-	addon_url = "https://github.com/ruifontes/virtualReview",
+	addon_url = "https://github.com/ragb/virtualReview",
 	# URL for the add-on repository where the source code can be found
-	addon_sourceURL = "https://github.com/ruifontes/virtualReview",
+	addon_sourceURL = "https://github.com/ragb/virtualReview",
 	# Documentation file name
 	addon_docFileName="readme.html",
 	# Minimum NVDA version supported (e.g. "2019.3.0", minor version is optional)

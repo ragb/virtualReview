@@ -2,7 +2,8 @@
 
 ## Information
 * Authors: Rui Fontes, Rui Batista and NVDA Addon Team
-* NVDA compatibility: 2019.3 and beyond
+* Minimum NVDA version: 2019.3
+* Last tested NVDA version: 2026.1
 
 ## Presentation
 This Addon allows NVDA users to review a Window content in a text box, similar to window virtualization of JAWS for Windows.

@@ -1,0 +1,83 @@
+name: build addon
+
+on:
+  push:
+    tags: ["*"]
+    # To build on main/master branch, uncomment the following line:
+    # branches: [ main , master ]
+
+  pull_request:
+    branches: [ main, master ]
+
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v7
+    - name: Install uv
+      uses: astral-sh/setup-uv@v7
+      with:
+        enable-cache: true
+    - name: Install dependencies
+      run: |
+        sudo apt-get update  -y
+        sudo apt-get install -y gettext
+        uv sync
+
+    - name: Code checks
+      # pyright is skipped in CI because it needs NVDA source (../nvda/source), which is not
+      # checked out here; it still runs as a local hook. This matches how other addons using the
+      # template (e.g. the nvdaes/* addons) handle it.
+      run: export PREK_SKIP=no-commit-to-branch,pyright; uv run prek run --all-files
+
+    - name: building addon
+      run: uv run scons && uv run scons pot
+
+    - uses: actions/upload-artifact@v7
+      with:
+        name: packaged_addon
+        path: |
+          ./*.nvda-addon
+        archive: false
+
+    - uses: actions/upload-artifact@v7
+      with:
+        name: translation_template
+        path: |
+          ./*.pot
+        archive: false
+
+  upload_release:
+    runs-on: ubuntu-latest
+    if: ${{ startsWith(github.ref, 'refs/tags/') }}
+    needs: ["build"]
+    permissions:
+      contents: write
+    steps:
+    - uses: actions/checkout@v7
+    - name: download all artifacts
+      uses: actions/download-artifact@v8
+      with:
+        path: .
+        merge-multiple: true
+    - name: Display structure of downloaded files
+      run: ls -R
+    - name: Calculate sha256
+      run: |
+        echo -e "\nSHA256: " >> changelog.md
+        sha256sum *.nvda-addon >> changelog.md
+
+    - name: Release
+      uses: softprops/action-gh-release@v3
+      with:
+        files: |
+          *.nvda-addon
+          *.pot
+        body_path: changelog.md
+        fail_on_unmatched_files: true
+        prerelease: ${{ contains(github.ref, '-') }}
