@@ -1,5 +1,13 @@
 # Virtual Review
 
+## In loving memory of Rui Fontes
+
+This add-on is maintained and improved in loving memory of Rui Fontes, who passed away on 11 July 2026.
+
+Rui devoted much of his life to making technology accessible to blind and visually impaired people, and his generosity, skill, and dedication touched countless users and fellow developers in the NVDA community. This project is carried forward in his honour, and with heartfelt gratitude for everything he gave. May his work keep opening doors for those who need it.
+
+---
+
 ## Information
 * Authors: Rui Fontes, Rui Batista and NVDA Addon Team
 * Minimum NVDA version: 2019.3
