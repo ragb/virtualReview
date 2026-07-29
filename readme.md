@@ -13,4 +13,3 @@ Note, however, that this is just a convenience for users and does not replace NV
 Press NVDA+control+w to open the virtual revision Window.
 Then simply navigate the shown textbox as you do in any other text content.
 You can press Escape to close the virtual revision window.
-

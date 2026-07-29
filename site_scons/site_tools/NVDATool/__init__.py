@@ -34,7 +34,9 @@ def generate(env: Environment):
 
 	addonAction = env.Action(
 		lambda target, source, env: createAddonBundleFromPath(
-			source[0].abspath, target[0].abspath, env["excludePatterns"]
+			source[0].abspath,
+			target[0].abspath,
+			env["excludePatterns"],
 		)
 		and None,
 		lambda target, source, env: f"Generating Addon {target[0]}",
@@ -71,7 +73,9 @@ def generate(env: Environment):
 	)
 
 	env["BUILDERS"]["NVDATranslatedManifest"] = Builder(
-		action=translatedManifestAction, suffix=".ini", src_siffix=".ini.tpl"
+		action=translatedManifestAction,
+		suffix=".ini",
+		src_siffix=".ini.tpl",
 	)
 
 	env.SetDefault(mdExtensions={})
