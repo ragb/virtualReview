@@ -16,4 +16,3 @@ Pressione NVDA+Control+w para abrir a janela de exploração virtual. Aí
 simplesmente navegue na caixa de texto exibida como se faz em qualquer outro
 conteúdo textual. Pode pressionar escape para fechar a janela de exploração
 virtual.
-

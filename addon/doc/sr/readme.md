@@ -20,7 +20,7 @@ Pritisnite NVDA+control+w da otvorite prozor virtuelnog pregleda.  Nakon toga kr
 * Sada je moguće pregledati sadržaj univerzalnih aplikacija (eng. Universal Windows platform(UWP)) u Windowsu 10 i većini modernih aplikacija u Windowsu 8.x.
 * Kada dodatak preuzima sadržaj ekrana za moderne i univerzalne aplikacije, čućete zvučni signal kada je virtuelni prozor spreman.
 
-## Promene u verziji 2.0## 
+## Promene u verziji 2.0##
 
 * Novo ime: Virtuelni pregled.
 * Zbog promena u načinu prikazivanja sadržaja, NVDA verzija 2015.2 ili novija je neophodna.
