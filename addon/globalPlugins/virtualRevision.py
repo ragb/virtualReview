@@ -62,7 +62,7 @@ def _isDecorativeTerminalLine(line):
 	stripped = line.strip()
 	if not stripped:
 		return True
-	return all("─" <= ch <= "╿" for ch in stripped)
+	return all(ch.isspace() or "─" <= ch <= "╿" for ch in stripped)
 
 
 def _cleanTerminalText(text):
