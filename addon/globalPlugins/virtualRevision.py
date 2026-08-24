@@ -93,7 +93,7 @@ class VirtualRevisionSettingsPanel(settingsDialogs.SettingsPanel):
 		sHelper = guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
 		# Translators: Label for the checkbox that toggles the alert beeps for UWP windows.
 		self.playBeepCheckBox = sHelper.addItem(
-			wx.CheckBox(self, label=_("Play alert &beeps when reviewing UWP windows"))
+			wx.CheckBox(self, label=_("Play alert &beeps when reviewing UWP windows")),
 		)
 		self.playBeepCheckBox.SetValue(config.conf["virtualRevision"]["playBeep"])
 
