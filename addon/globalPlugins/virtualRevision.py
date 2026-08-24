@@ -11,6 +11,10 @@ import textInfos
 import ui
 import scriptHandler
 import addonHandler
+import config
+import gui
+import wx
+from gui import guiHelper, settingsDialogs
 
 addonHandler.initTranslation()
 
@@ -76,6 +80,27 @@ def _cleanTerminalText(text):
 	return "\n".join(lines)
 
 
+config.conf.spec["virtualRevision"] = {
+	"playBeep": "boolean(default=True)",
+}
+
+
+class VirtualRevisionSettingsPanel(settingsDialogs.SettingsPanel):
+	# Translators: Title of the Virtual Revision settings panel.
+	title = _("Virtual Revision")
+
+	def makeSettings(self, settingsSizer):
+		sHelper = guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
+		# Translators: Label for the checkbox that toggles the alert beeps for UWP windows.
+		self.playBeepCheckBox = sHelper.addItem(
+			wx.CheckBox(self, label=_("Play alert &beeps when reviewing UWP windows"))
+		)
+		self.playBeepCheckBox.SetValue(config.conf["virtualRevision"]["playBeep"])
+
+	def onSave(self):
+		config.conf["virtualRevision"]["playBeep"] = self.playBeepCheckBox.GetValue()
+
+
 def obtainUWPWindowText():
 	foreground = api.getForegroundObject()
 	desktop = api.getDesktopObject()
@@ -119,6 +144,17 @@ def obtainUWPWindowText():
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = SCRCAT_TEXTREVIEW
 
+	def __init__(self):
+		super().__init__()
+		if not globalVars.appArgs.secure:
+			gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(VirtualRevisionSettingsPanel)
+
+	def terminate(self):
+		try:
+			gui.settingsDialogs.NVDASettingsDialog.categoryClasses.remove(VirtualRevisionSettingsPanel)
+		except ValueError:
+			pass
+
 	@scriptHandler.script(
 		# Translators: Message presented in input help mode.
 		description=_("Opens a window containing the text of the currently focused window for easy review."),
@@ -143,11 +179,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			text = _cleanTerminalText(info.clipboardText)
 		# Because it may take a while to iterate through elements, play abeep to alert users of this fact and the fact it's a UWP screen.
 		elif obj.windowClassName.startswith(("Windows.UI.Core", "Windows.UI.Input.InputSite")):
-			import tones
+			playBeep = config.conf["virtualRevision"]["playBeep"]
+			if playBeep:
+				import tones
 
-			tones.beep(400, 300)
+				tones.beep(400, 300)
 			text = "\n".join(obtainUWPWindowText())
-			tones.beep(400, 50)
+			if playBeep:
+				tones.beep(400, 50)
 		else:
 			root = None
 			for ancestor in api.getFocusAncestors():
