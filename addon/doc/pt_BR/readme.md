@@ -12,7 +12,7 @@ conveniência para os usuários e não substitui o excelente suporte do NVDA à
 revisão plana e à navegação por objetos.
 
 ## Uso
-Pressione NVDA+Control+w para abrir a janela de exploração virtual. Aí
+Pressione NVDA+Alt+w para abrir a janela de exploração virtual. Aí
 simplesmente navegue na caixa de texto exibida como se faz em qualquer outro
 conteúdo textual. Pode pressionar escape para fechar a janela de exploração
 virtual.

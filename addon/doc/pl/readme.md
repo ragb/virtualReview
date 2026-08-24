@@ -10,7 +10,7 @@ funkcji Podglądu ekranu i nawigacji obiektowej wbudowanych w NVDA.
 
 ## Użycie ##
 
-Naciśnij nvda+control+w aby otworzyć okno wirtualnego podglądu. Następnie
+Naciśnij nvda+alt+w aby otworzyć okno wirtualnego podglądu. Następnie
 przemieszczaj się po treści w polu edycyjnym, tak jak w każdej treści
 tekstowej. Możesz nacisnąć Escape, aby zamknąć okno.
 

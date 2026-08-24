@@ -11,7 +11,7 @@ navigării obiectului din NVDA.
 
 ## Utilizare ##
 
-Apăsați NVDA+control+w pentru a deschide fereastra virtual revision . Apoi,
+Apăsați NVDA+alt+w pentru a deschide fereastra virtual revision . Apoi,
 pur și simplu navigați la caseta de text arătată ca și în orice alt conținut
 de text. Puteți apăsa Escape pentru a închide fereastra virtual revision.
 
