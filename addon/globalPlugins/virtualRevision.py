@@ -50,6 +50,32 @@ def _findTermControl(obj):
 	return None
 
 
+def _isDecorativeTerminalLine(line):
+	# True for lines whose only non-whitespace characters are in the Unicode Box Drawing
+	# block (U+2500-U+257F): the borders, separators, and corners that TUI apps paint.
+	# Content lines that happen to contain a "│" border still survive because the
+	# letters/digits inside fall outside the range.
+	stripped = line.strip()
+	if not stripped:
+		return True
+	return all("─" <= ch <= "╿" for ch in stripped)
+
+
+def _cleanTerminalText(text):
+	# Terminal cells are space-padded to the column width, and TUI apps reserve fixed
+	# rows/columns for borders, status bars, input, etc. Captured as a UNIT_STORY this
+	# turns into long runs of blank padding and box-border-only lines that bury the actual
+	# content when the review window is navigated line by line. Strip per-line trailing
+	# whitespace and drop lines that carry no real content.
+	lines = []
+	for line in text.split("\n"):
+		stripped = line.rstrip()
+		if _isDecorativeTerminalLine(stripped):
+			continue
+		lines.append(stripped)
+	return "\n".join(lines)
+
+
 def obtainUWPWindowText():
 	foreground = api.getForegroundObject()
 	desktop = api.getDesktopObject()
@@ -61,7 +87,7 @@ def obtainUWPWindowText():
 		if _isTermControl(curObject):
 			info = curObject.makeTextInfo(textInfos.POSITION_FIRST)
 			info.expand(textInfos.UNIT_STORY)
-			text = info.clipboardText.rstrip()
+			text = _cleanTerminalText(info.clipboardText)
 			uwpTextList.append(text)
 		if curObject.simpleFirstChild:
 			curObject = curObject.simpleFirstChild
@@ -85,7 +111,7 @@ def obtainUWPWindowText():
 	if _isTermControl(foreground):
 		info = foreground.makeTextInfo(textInfos.POSITION_FIRST)
 		info.expand(textInfos.UNIT_STORY)
-		text = info.clipboardText.rstrip()
+		text = _cleanTerminalText(info.clipboardText)
 		uwpTextList.append(text)
 	return uwpTextList
 
@@ -114,7 +140,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if term is not None:
 			info = term.makeTextInfo(textInfos.POSITION_FIRST)
 			info.expand(textInfos.UNIT_STORY)
-			text = info.clipboardText.rstrip()
+			text = _cleanTerminalText(info.clipboardText)
 		# Because it may take a while to iterate through elements, play abeep to alert users of this fact and the fact it's a UWP screen.
 		elif obj.windowClassName.startswith(("Windows.UI.Core", "Windows.UI.Input.InputSite")):
 			import tones
