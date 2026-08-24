@@ -110,8 +110,7 @@ def obtainUWPWindowText():
 		if curObject.name is not None:
 			uwpTextList.append(curObject.name)
 		if _isTermControl(curObject):
-			info = curObject.makeTextInfo(textInfos.POSITION_FIRST)
-			info.expand(textInfos.UNIT_STORY)
+			info = curObject.makeTextInfo(textInfos.POSITION_ALL)
 			text = _cleanTerminalText(info.clipboardText)
 			uwpTextList.append(text)
 		if curObject.simpleFirstChild:
@@ -124,7 +123,10 @@ def obtainUWPWindowText():
 			parent = curObject.simpleParent
 			# As long as one is on current foreground object...
 			# Stay within the current top-level window.
-			if parent.simpleParent == desktop:
+			# Compare window handles rather than objects: an add-on that puts overlay classes on
+			# the desktop object makes the identity comparison fail.
+			grandParent = parent.simpleParent
+			if grandParent is not None and grandParent.windowHandle == desktop.windowHandle:
 				break
 			while parent and not parent.simpleNext:
 				parent = parent.simpleParent
@@ -134,8 +136,7 @@ def obtainUWPWindowText():
 			except AttributeError:
 				continue
 	if _isTermControl(foreground):
-		info = foreground.makeTextInfo(textInfos.POSITION_FIRST)
-		info.expand(textInfos.UNIT_STORY)
+		info = foreground.makeTextInfo(textInfos.POSITION_ALL)
 		text = _cleanTerminalText(info.clipboardText)
 		uwpTextList.append(text)
 	return uwpTextList
@@ -175,8 +176,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# generic child walk is slower and can miss the active pane.
 		term = _findTermControl(obj)
 		if term is not None:
-			info = term.makeTextInfo(textInfos.POSITION_FIRST)
-			info.expand(textInfos.UNIT_STORY)
+			info = term.makeTextInfo(textInfos.POSITION_ALL)
 			text = _cleanTerminalText(info.clipboardText)
 		# Because it may take a while to iterate through elements, play abeep to alert users of this fact and the fact it's a UWP screen.
 		elif obj.windowClassName.startswith(("Windows.UI.Core", "Windows.UI.Input.InputSite")):
@@ -195,14 +195,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					root = ancestor
 					break
 			if root:
-				info = root.makeTextInfo(textInfos.POSITION_FIRST)
-				# sys.maxint is gone in Python 3 as integer bit width can grow arbitrarily.
-				# Use the static value (0x7fffffff or (2^31)-1) directly.
-				info.move(textInfos.UNIT_LINE, 0x7FFFFFFF, endPoint="end")
+				info = root.makeTextInfo(textInfos.POSITION_ALL)
 				text = info.clipboardText.replace("\0", " ")
 			if obj.windowClassName == "ConsoleWindowClass":
-				info = obj.makeTextInfo(textInfos.POSITION_FIRST)
-				info.expand(textInfos.UNIT_STORY)
+				info = obj.makeTextInfo(textInfos.POSITION_ALL)
 				text = info.clipboardText.rstrip()
 		if text:
 			name = api.getForegroundObject().name
