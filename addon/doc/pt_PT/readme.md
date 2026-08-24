@@ -13,7 +13,7 @@ navegação de objeto do NVDA.
 
 ## Utilização:
 
-Pressione NVDA+control+w para abrir a janela de revisão virtual. Em seguida,
+Pressione NVDA+alt+w para abrir a janela de revisão virtual. Em seguida,
 simplesmente navegue na caixa de texto mostrada como faz em qualquer outro
 conteúdo de texto. Pode pressionar Escape para fechar a janela de revisão
 virtual.

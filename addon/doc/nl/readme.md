@@ -10,7 +10,7 @@ review modes and object navigation support.
 
 ## Gebruik ##
 
-Druk nvda+control+w om het virtual revision venster te openen. Navigeer
+Druk nvda+alt+w om het virtual revision venster te openen. Navigeer
 vervolgens door het tekstveld zoals u dit met elke andere tekst doet. Druk
 op Escape om het virtual revision venster te sluiten.
 

@@ -10,7 +10,7 @@ review modes and object navigation support.
 
 ## Način korištenja ##
 
-Pritisnite NVDA+control+w kako biste otvorili prozor virtualne revizije.
+Pritisnite NVDA+alt+w kako biste otvorili prozor virtualne revizije.
 Potom se jednostavno krećite po tekstualnom okviru kao što radite i u
 ostalim tekstualnim okvirima.  Možete pritisnuti escape da biste zatvorili
 prozor virtualne revizije.

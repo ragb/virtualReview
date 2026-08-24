@@ -10,7 +10,7 @@ review modes and object navigation support.
 
 ## použitie ##
 
-Okno virtualizujete skratkou ctrl+nvda+w. Po texte sa pohybujte tak, ako v
+Okno virtualizujete skratkou alt+nvda+w. Po texte sa pohybujte tak, ako v
 ostatných editačných poliach. Okno zavriete klávesom escape.
 
 ## Changes for 2.2

@@ -11,7 +11,7 @@ soporte da navegación de obxectos.
 
 ## Uso ##
 
-Preme nvda+control+w para abrir a Ventá de revisión virtual. Logo
+Preme nvda+alt+w para abrir a Ventá de revisión virtual. Logo
 sinxelamente navega polo que se amosa no cadro de texto como o fas en
 calquera outro contido de texto. Podes premer escape para pechar a ventá de
 revisión virtual.

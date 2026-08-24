@@ -11,7 +11,7 @@ soporte de navegación de objetos.
 
 ## Utilización ##
 
-Pulsa nvda+control+w para abrir la ventana revisión virtual. Entonces
+Pulsa nvda+alt+w para abrir la ventana revisión virtual. Entonces
 simplemente navega el cuadro de texto mostrado como lo haces en cualquier
 otro contenido de texto. Puedes pulsar escape para cerrar la ventana de
 revisión virtual.

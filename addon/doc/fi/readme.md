@@ -10,7 +10,7 @@ tarkastelutiloja tai objektinavigointia.
 
 ## Käyttö ##
 
-Virtualisoi aktiivinen ikkuna painamalla NVDA+Ctrl+W. Voit liikkua näkyviin
+Virtualisoi aktiivinen ikkuna painamalla NVDA+Alt+W. Voit liikkua näkyviin
 tulevassa tekstiruudussa kuten missä tahansa muussa tekstissä.  Sulje ikkuna
 painamalla Esc.
 
