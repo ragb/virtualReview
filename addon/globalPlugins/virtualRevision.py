@@ -150,6 +150,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(VirtualRevisionSettingsPanel)
 
 	def terminate(self):
+		super().terminate()
 		try:
 			gui.settingsDialogs.NVDASettingsDialog.categoryClasses.remove(VirtualRevisionSettingsPanel)
 		except ValueError:
