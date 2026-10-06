@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en">
+<file id="readme.md" original="https://raw.githubusercontent.com/ragb/virtualReview/996caa35fcf8b4d354373ab3a69b203243cbe5ad/readme.md">
+<skeleton>
+# $(ID:c25ab58e-c8df-445e-962e-87a03bda7aca)
+
+## $(ID:b8836d36-ce77-4d49-8bcb-8849374cdbc5)
+
+$(ID:74f901f7-4294-4a24-a631-2e4f08928900)
+
+$(ID:3d5b22ad-2dae-4196-8e52-4f6bc9d6310f)
+
+$(ID:29f5a92a-9ebd-4dfc-8947-74c9c5a1b658)
+
+## $(ID:bd496eed-f97b-46a7-996b-2f0b3661fd91)
+* $(ID:8a82db4d-ef98-4af2-947e-788542de3ca9)
+* $(ID:a75c4915-5f6b-4890-b308-fa2b871033f1)
+* $(ID:ce4b4cf8-721d-4e47-a6c4-7101afb0bb32)
+
+## $(ID:e0a6f93c-8aeb-4988-97cc-6f42a766ced6)
+$(ID:af4cdc03-4510-4daa-8149-7e656504045c)
+$(ID:07d5d861-3735-42ff-b4c8-e64a5b736d50)
+
+## $(ID:f79dc509-4232-41a0-810f-6b10db6f006d)
+$(ID:5e3fbd44-355a-4161-8ec8-8dab52875201)
+$(ID:5aa410c9-5041-46c0-8963-7749722870b1)
+$(ID:2ca766bf-d891-4ca0-ab72-c8a850477f5e)
+
+</skeleton>
+<unit id="c25ab58e-c8df-445e-962e-87a03bda7aca">
+<notes>
+<note appliesTo="source">line: 2</note>
+<note appliesTo="source">prefix: # </note>
+</notes>
+<segment>
+<source>Virtual Review</source>
+</segment>
+</unit>
+<unit id="b8836d36-ce77-4d49-8bcb-8849374cdbc5">
+<notes>
+<note appliesTo="source">line: 4</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>In loving memory of Rui Fontes</source>
+</segment>
+</unit>
+<unit id="74f901f7-4294-4a24-a631-2e4f08928900">
+<notes>
+<note appliesTo="source">line: 6</note>
+</notes>
+<segment>
+<source>This add-on is maintained and improved in loving memory of Rui Fontes, who passed away on 11 July 2026.</source>
+</segment>
+</unit>
+<unit id="3d5b22ad-2dae-4196-8e52-4f6bc9d6310f">
+<notes>
+<note appliesTo="source">line: 8</note>
+</notes>
+<segment>
+<source>Rui devoted much of his life to making technology accessible to blind and visually impaired people, and his generosity, skill, and dedication touched countless users and fellow developers in the NVDA community. This project is carried forward in his honour, and with heartfelt gratitude for everything he gave. May his work keep opening doors for those who need it.</source>
+</segment>
+</unit>
+<unit id="29f5a92a-9ebd-4dfc-8947-74c9c5a1b658">
+<notes>
+<note appliesTo="source">line: 10</note>
+</notes>
+<segment>
+<source>---</source>
+</segment>
+</unit>
+<unit id="bd496eed-f97b-46a7-996b-2f0b3661fd91">
+<notes>
+<note appliesTo="source">line: 12</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Information</source>
+</segment>
+</unit>
+<unit id="8a82db4d-ef98-4af2-947e-788542de3ca9">
+<notes>
+<note appliesTo="source">line: 13</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Authors: Rui Fontes, Rui Batista and NVDA Addon Team</source>
+</segment>
+</unit>
+<unit id="a75c4915-5f6b-4890-b308-fa2b871033f1">
+<notes>
+<note appliesTo="source">line: 14</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Minimum NVDA version: 2019.3</source>
+</segment>
+</unit>
+<unit id="ce4b4cf8-721d-4e47-a6c4-7101afb0bb32">
+<notes>
+<note appliesTo="source">line: 15</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Last tested NVDA version: 2026.2</source>
+</segment>
+</unit>
+<unit id="e0a6f93c-8aeb-4988-97cc-6f42a766ced6">
+<notes>
+<note appliesTo="source">line: 17</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Presentation</source>
+</segment>
+</unit>
+<unit id="af4cdc03-4510-4daa-8149-7e656504045c">
+<notes>
+<note appliesTo="source">line: 18</note>
+</notes>
+<segment>
+<source>This Addon allows NVDA users to review a Window content in a text box, similar to window virtualization of JAWS for Windows.</source>
+</segment>
+</unit>
+<unit id="07d5d861-3735-42ff-b4c8-e64a5b736d50">
+<notes>
+<note appliesTo="source">line: 19</note>
+</notes>
+<segment>
+<source>Note, however, that this is just a convenience for users and does not replace NVDA's excellent review modes and object navigation support.</source>
+</segment>
+</unit>
+<unit id="f79dc509-4232-41a0-810f-6b10db6f006d">
+<notes>
+<note appliesTo="source">line: 21</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Usage</source>
+</segment>
+</unit>
+<unit id="5e3fbd44-355a-4161-8ec8-8dab52875201">
+<notes>
+<note appliesTo="source">line: 22</note>
+</notes>
+<segment>
+<source>Press NVDA+control+w to open the virtual revision Window.</source>
+</segment>
+</unit>
+<unit id="5aa410c9-5041-46c0-8963-7749722870b1">
+<notes>
+<note appliesTo="source">line: 23</note>
+</notes>
+<segment>
+<source>Then simply navigate the shown textbox as you do in any other text content.</source>
+</segment>
+</unit>
+<unit id="2ca766bf-d891-4ca0-ab72-c8a850477f5e">
+<notes>
+<note appliesTo="source">line: 24</note>
+</notes>
+<segment>
+<source>You can press Escape to close the virtual revision window.</source>
+</segment>
+</unit>
+</file>
+</xliff>
