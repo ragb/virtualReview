@@ -10,7 +10,7 @@ NVDA kiváló áttekintő módjait, és elem navigáció támogatását.
 
 ## Használat ##
 
-Nyomja meg az NVDA+control+w billentyűparancsot a Virtuális áttekintő
+Nyomja meg az NVDA+alt+w billentyűparancsot a Virtuális áttekintő
 megjelenítéséhez, majd használja a szöveg áttekintő billentyűket a mező
 elolvasásához. Az Esc lenyomásával zárhatja be az ablakot.
 

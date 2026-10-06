@@ -10,7 +10,7 @@ questa modalità non sostituisce la navigazione ad oggetti di NVDA.
 
 ## Uso ##
 
-Premere NVDA+Control+w per virtualizzare la finestra corrente. Utilizzare
+Premere NVDA+Alt+w per virtualizzare la finestra corrente. Utilizzare
 poi i tasti di navigazione ed esplorazione del testo come frecce, pagina
 su/giù, per esaminarlo
 

@@ -7,7 +7,7 @@
 Ovaj dodatak dozvoljava korisnicima pregled sadržaja prozora u jednom tekstualnom polju, slično virtualizaciji prozora u Jawsu.  Imajte na umu, da je ovo samo poboljšanje iskustva korisnika i ne zamenjuje odlične režime pregleda programa NVDA kao što su objektna navigacija.
 
 ## Korišćenje##
-Pritisnite NVDA+control+w da otvorite prozor virtuelnog pregleda.  Nakon toga krećite se kroz sadržaj kao i u bilo kom drugom tekstualnom polju.  You can press Escape to close the virtual revision window.
+Pritisnite NVDA+alt+w da otvorite prozor virtuelnog pregleda.  Nakon toga krećite se kroz sadržaj kao i u bilo kom drugom tekstualnom polju.  You can press Escape to close the virtual revision window.
 
 
 ## Promene u verziji 2.2 ##

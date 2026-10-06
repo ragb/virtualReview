@@ -160,7 +160,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	@scriptHandler.script(
 		# Translators: Message presented in input help mode.
 		description=_("Opens a window containing the text of the currently focused window for easy review."),
-		gesture="kb:nvda+control+w",
+		gestures=("kb:nvda+alt+w", "kb:nvda+control+w"),
 	)
 	def script_virtualWindowReview(self, gesture):
 		# Find the first focus ancestor that have any display text, according to the display model
