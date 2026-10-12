@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2026-10-06 22:41+0000\n"
-"PO-Revision-Date: 2026-10-06 22:42\n"
+"PO-Revision-Date: 2026-10-11 10:10\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -20,16 +20,16 @@ msgstr ""
 #. Translators: Title of the Virtual Revision settings panel.
 #: addon\globalPlugins\virtualRevision.py:90
 msgid "Virtual Revision"
-msgstr ""
+msgstr "虚拟浏览"
 
 #: addon\globalPlugins\virtualRevision.py:96
 msgid "Play alert &beeps when reviewing UWP windows"
-msgstr ""
+msgstr "查看 UWP 窗口时播放提示音(&B)"
 
 #. Translators: Message presented in input help mode.
 #: addon\globalPlugins\virtualRevision.py:162
 msgid "Opens a window containing the text of the currently focused window for easy review."
-msgstr "打开包含当前焦点窗口文本的见面，以方便查看。"
+msgstr "打开包含当前焦点窗口文本的界面，以方便查看。"
 
 #. Translators: The title of the virtual review window when the foreground window has no name, commonly seen when all windows are minimized.
 #: addon\globalPlugins\virtualRevision.py:207
@@ -64,5 +64,5 @@ msgstr "提供当前聚焦窗口文本的简单可查看的对话框。"
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
 msgid "Set compatibility with NVDA 2026.2."
-msgstr ""
+msgstr "与 NVDA 2026.2 兼容。"
 
