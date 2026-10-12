@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en">
-<file id="readme.md" original="https://raw.githubusercontent.com/ragb/virtualReview/996caa35fcf8b4d354373ab3a69b203243cbe5ad/readme.md">
+<file id="readme.md" original="https://raw.githubusercontent.com/ragb/virtualReview/9c4ea08db10617c4918f1a49a6c400b513753453/readme.md">
 <skeleton>
 # $(ID:c25ab58e-c8df-445e-962e-87a03bda7aca)
 
@@ -22,7 +22,7 @@ $(ID:af4cdc03-4510-4daa-8149-7e656504045c)
 $(ID:07d5d861-3735-42ff-b4c8-e64a5b736d50)
 
 ## $(ID:f79dc509-4232-41a0-810f-6b10db6f006d)
-$(ID:5e3fbd44-355a-4161-8ec8-8dab52875201)
+$(ID:9358463f-1aa5-48bf-8d6c-90c14aeaed33)
 $(ID:5aa410c9-5041-46c0-8963-7749722870b1)
 $(ID:2ca766bf-d891-4ca0-ab72-c8a850477f5e)
 
@@ -139,12 +139,12 @@ $(ID:2ca766bf-d891-4ca0-ab72-c8a850477f5e)
 <source>Usage</source>
 </segment>
 </unit>
-<unit id="5e3fbd44-355a-4161-8ec8-8dab52875201">
+<unit id="9358463f-1aa5-48bf-8d6c-90c14aeaed33">
 <notes>
 <note appliesTo="source">line: 22</note>
 </notes>
 <segment>
-<source>Press NVDA+control+w to open the virtual revision Window.</source>
+<source>Press NVDA+alt+w to open the virtual revision Window.</source>
 </segment>
 </unit>
 <unit id="5aa410c9-5041-46c0-8963-7749722870b1">
