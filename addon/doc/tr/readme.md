@@ -18,6 +18,6 @@ Bu eklenti, NVDA kullanıcılarının bir pencerenin içeriğini, JAWS for Windo
 Ancak, bunun yalnızca kullanıcılar için bir kolaylık olduğunu ve NVDA'nın mükemmel inceleme Kiplerinin ve nesne Dolaşım desteğinin yerini almadığını unutmayın.
 
 ## Kullanım
-Press NVDA+alt+w to open the virtual revision Window.
+Sanal İnceleme penceresini açmak için NVDA+alt+w tuşlarına basın.
 Ardından, diğer metin içeriklerinde yaptığınız gibi gösterilen metin kutusunda dolaşmanız yeterlidir.
 Sanal İzleme penceresini kapatmak için Escape tuşuna basabilirsiniz.

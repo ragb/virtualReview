@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2026-10-06 22:41+0000\n"
-"PO-Revision-Date: 2026-10-07 01:18\n"
+"PO-Revision-Date: 2026-10-25 08:39\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
@@ -20,11 +20,11 @@ msgstr ""
 #. Translators: Title of the Virtual Revision settings panel.
 #: addon\globalPlugins\virtualRevision.py:90
 msgid "Virtual Revision"
-msgstr ""
+msgstr "Віртуальний перегляд"
 
 #: addon\globalPlugins\virtualRevision.py:96
 msgid "Play alert &beeps when reviewing UWP windows"
-msgstr ""
+msgstr "Відтворювати звукові сигнали при перегляді UWP вікон"
 
 #. Translators: Message presented in input help mode.
 #: addon\globalPlugins\virtualRevision.py:162
@@ -64,5 +64,5 @@ msgstr "Надає простий діалог для перегляду тек�
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
 msgid "Set compatibility with NVDA 2026.2."
-msgstr ""
+msgstr "Сумісний із NVDA 2026.2."
 
