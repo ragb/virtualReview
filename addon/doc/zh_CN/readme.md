@@ -18,6 +18,6 @@ Rui 将一生中的大量时光奉献给了让盲人和低视力人士能够使�
 请注意，此功能仅为用户提供便利，并不能替代 NVDA 卓越的浏览模式和对象导航支持。
 
 ## 用法
-Press NVDA+alt+w to open the virtual revision Window.
+按下 NVDA+Alt+W 打开虚拟浏览窗口
 随后即可像处理其他文本内容一样对显示的文本框进行导航。
 按 Escape 键可关闭虚拟浏览窗口。
